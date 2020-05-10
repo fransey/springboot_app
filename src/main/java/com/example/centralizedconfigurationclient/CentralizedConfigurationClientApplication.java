@@ -22,7 +22,9 @@ public class CentralizedConfigurationClientApplication {
 @RefreshScope
 @RestController
 class MessageRestController {
-      private String color;
+    @Value("<!DOCTYPE html> <html> <head><meta http-equiv=\"refresh\" content=\"5\" ></head> <body bgcolor=#\"${color: E6E6FA}\"> <h1> Spring Cloud App - My App</h1> <b>Name: </b> ${spring.application.name} <br><b>Version: </b> ${spring.application.version} <br><b>Profile: </b> ${spring.profiles.active} <br><b>Message: </b> ${message: default message} </body> </html>")
+    private String message;
+    private String color;
 
     @RequestMapping("/message")
     String getMessage() {
@@ -32,7 +34,7 @@ class MessageRestController {
     String getColor() {
         return this.color;
     }
-    
+
     public void testMethod()
     {
         String test01 = "test01";
