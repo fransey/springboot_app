@@ -32,9 +32,10 @@ class MessageRestController {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+       
 <body>
 
-<div class="jumbotron text-center" style="background-color:#${color: E6E6FA}">
+<div class="jumbotron text-center" style="background-color:#${color: E6E6FA}\">
 	<h1> This is a Spring boot Application </h1>
 	<p>Name: </p> ${spring.application.name} <br>
 	<p>Version: </p> ${spring.application.version} <br>
