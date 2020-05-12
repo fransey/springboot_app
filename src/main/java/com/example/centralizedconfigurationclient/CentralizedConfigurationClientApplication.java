@@ -34,8 +34,7 @@ class MessageRestController {
 </head>
 <body>
 
-<div class="jumbotron text-center">
-<!-- bgcolor=#\"${color: E6E6FA}\" -->
+<div class="jumbotron text-center" style="background-color:#${color: E6E6FA}">
 	<h1> This is a Spring boot Application </h1>
 	<p>Name: </p> ${spring.application.name} <br>
 	<p>Version: </p> ${spring.application.version} <br>
