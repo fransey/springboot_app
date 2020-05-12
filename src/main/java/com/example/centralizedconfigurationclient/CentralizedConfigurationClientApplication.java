@@ -21,7 +21,32 @@ public class CentralizedConfigurationClientApplication {
 @RefreshScope
 @RestController
 class MessageRestController {
-    @Value("<!DOCTYPE html> <html> <head><meta http-equiv=\"refresh\" content=\"20\" ></head> <body bgcolor=#\"${color: E6E6FA}\"> <h1> This is a Spring boot Application </h1> <b>Name: </b> ${spring.application.name} <br><b>Version: </b> ${spring.application.version} <br><b>Profile: </b> ${spring.profiles.active} <br><b>Message: </b> ${message: default message} </body> </html>")
+    
+@Value("<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Spring Boot Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+<!-- bgcolor=#\"${color: E6E6FA}\" -->
+	<h1> This is a Spring boot Application </h1>
+	<p>Name: </p> ${spring.application.name} <br>
+	<p>Version: </p> ${spring.application.version} <br>
+	<p>Profile: </p> ${spring.profiles.active} <br>
+	<p>Message: </p> ${message: default message} 
+</div>
+
+</body>
+</html>")
+
+ 
     private String message;
     private String color;
 
