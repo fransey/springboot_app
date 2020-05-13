@@ -8,6 +8,7 @@ class CentralizedConfigurationClientApplicationTests {
 
 	@Test
 	void contextLoads() {
+		//test
 	}
 
 }
