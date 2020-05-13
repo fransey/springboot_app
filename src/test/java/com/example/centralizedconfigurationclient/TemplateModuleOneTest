@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class TemplateModuleOneTest {
    @Test
    public void toUpperCase() {
-       assertEquals("TEST1",new TemplateModuleOne().toUpperCase("test"));
+       assertEquals("TEST2",new TemplateModuleOne().toUpperCase("test"));
    }
 
    @Test(expected = NullPointerException.class)
