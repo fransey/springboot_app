@@ -22,17 +22,17 @@ public class CentralizedConfigurationClientApplication {
 @RestController
 class MessageRestController {
     
-@Value("<!DOCTYPE html><html><head><title>Spring Boot Application</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\"><script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script><script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\"></script></head>       <body><div class=\"jumbotron text-center\" style=\"background-color:#${color: E6E6FA}\">	<h1> This is a Spring boot Application </h1>	<p>Name: </p> ${spring.application.name} <br>	<p>Version: </p> ${spring.application.version} <br>	<p>Profile: </p> ${spring.profiles.active} <br>	<p>Message: </p> ${message: default message} </div></body></html>")
+@Value("<!DOCTYPE html><html><head><title>Spring Boot Application</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\"><script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script><script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\"></script></head>       <body><div class=\"jumbotron text-center\" style=\"background-color:#${bgcolour: E6E6FA}\">	<h1> This is a Spring boot Application </h1>	<p>Name: </p> ${spring.application.name} <br>	<p>Version: </p> ${spring.application.version} <br>	<p>Profile: </p> ${spring.profiles.active} <br>	<p>Message: </p> ${description: This is a default description of the Springboot Applcation} </div></body></html>")
  
-    private String message;
-    private String color;
+    private String description;
+    private String bgcolour;
 
     @RequestMapping("/message")
-    String getMessage() {
-        return this.message;
+    String getDescription() {
+        return this.description;
     }
 
-    String getColor() {
-        return this.color;
+    String getBGColour() {
+        return this.bgcolour;
     }
 }
